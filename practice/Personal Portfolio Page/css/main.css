@@ -1,0 +1,235 @@
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.amarante-regular {
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root{
+
+    --color-dark : #3A3042;
+    --color-light : #fae8eb;
+    --color-pink : #F6CACA;
+    --color-rose : #e4c2c6;
+    --color-lilac : #cd9fcc;
+
+    
+--font-heading : 'Amarante' , sans-serif;
+--font-body : 'Ariel' , sans-serif;
+
+
+}
+
+body{
+    background-color: var(--color-dark);
+    font-family: var(--font-body); 
+    color: var(--color-light);
+    margin: 0px;
+    
+}
+h1{
+    font-family: var(--font-heading);
+    color: var(--color-light);
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+.tagline{
+    font-family: var(--font-body);
+    color: var(--color-light);
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+h2{
+    font-family: var(--font-heading);
+    color: var(--color-light);
+    text-align: center;
+    font-size: 2rem;
+    margin: 5px;
+}
+h3{
+    font-family: var(--font-heading);
+    color: var(--color-light);
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px;
+}
+/* About me info*/
+
+.AboutMe{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    background-color: var(--color-lilac);
+    border-radius: 25px;
+    color: var(--color-dark);
+    margin: 20px auto;
+    padding: 20px;
+    overflow: hidden;
+    column-gap: 20px;
+    max-width: 900px;
+
+
+}
+.AboutMe *{
+    margin-top: 0;
+}
+
+     .AboutMe img{
+        grid-column: 1;
+        width: 230px;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--color-lilac);
+        justify-self: center;
+    }
+    
+    
+    
+
+body p{
+    font-family: var(--font-body);
+    color: var(--color-light);
+    text-align: center;
+    font-size: 1.2rem;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 25px;
+    padding: 15px;
+   
+    } 
+
+    
+nav{
+    background-color: var(--color-rose);
+    color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin: 0  auto; 
+    max-width: 900px;
+    border-radius: 25px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+
+/* pet pics section*/
+.pet-pics{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    
+}
+/*just the pictures*/
+.pet-pics img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-lilac);
+    gap: 2px;
+ 
+}
+.pet-pics p{
+    font-family: var(--font-body);
+    color: var(--color-light);
+    font-size: 1.2rem;
+    max-width: 150px;
+    line-height: 20px;
+    
+    }
+    .about-text p {
+
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0;
+    max-width: 600px;
+    padding: 5px;
+}
+    .about-text h2{
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    
+    }
+nav a{
+    
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: bold;
+   margin-right: 20px;
+    margin-left: 20px 
+} 
+nav a:hover{
+    
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+.school-projects {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    background-color: var(--color-lilac);
+    border-radius: 25px;
+    margin: 20px auto;
+    max-width: 900px;
+   
+}
+
+.project {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    max-width: 220px;
+    background-color: var(--color-light);  
+    border: 3px solid var(--color-dark);   
+    border-radius: 15px;                   
+    padding: 15px;       
+}
+
+.project img {
+     width: 100px;
+    height: 100px;
+    object-fit: cover; 
+    padding :15px;
+}
+
+
+.project h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    padding : 15px;
+}
+.project p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin-top: 10px;
+}
+
+footer{
+    
+    color: var(--color-dark);
+    text-align: center;
+    padding: 10px;
+    font-size: small;
+}
