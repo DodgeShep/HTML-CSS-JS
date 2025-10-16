@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dodge Shepard</title>
+   
+    <!-- Google fonts link-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 link-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    </head>
+
+<body>
+
+    <div class="intro">
+    <h1> Dodge Shepard</h1>
+    <h2 class="intro-h2">Majoring in caffeine with a minor in panic. </h2>
+    </div>
+
+    <nav class ="main-navbar">
+        <div class="container">
+            <ul class="nav">
+                <!-- send to sections of the page-->
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- About me section-->
+   <section id="about" class="aboutme">
+  <div class="container aboutme-container">
+    <div class="aboutme-text">
+      <h1 class="aboutme-h1">About Me</h1>
+      <p class="aboutme-lead">
+        My name is Dodge — yes, like the truck. I’m an aspiring software engineer and toddler-wrangler by day and a professional pet snuggler by night.
+        Juggling my time with a pitbull, kitten, and special-needs toddler has made me adept at multitasking and problem-solving.
+      </p>
+    </div>
+
+    <div class="aboutme-image">
+      <img src="images/headshotedit.jpg" alt="Headshot" class="aboutme-img">
+    </div>
+  </div>
+</section>
+
+<!-- Pets section-->
+
+    <section id="pets" class="pets-section py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">My Pets</h2>
+
+    <div class="pets-grid">
+      <figure>
+        <img src="images/Reinhardt.jpg" alt="Reinhardt the Pitbull" class="img-fluid rounded shadow-sm">
+        <figcaption>Reinhardt — My 115 lb lap dog and aspiring dental hygenist.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/Genji.jpg" alt="Genji the Kitten" class="img-fluid rounded shadow-sm">
+        <figcaption>Genji — Mischief expert and interior redecorator.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- School stuff-->
+<section id="projects" class="projects-section py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">My Projects</h2>
+
+    <div class="projects-grid">
+      <figure class="project-card">
+        <img src="images/calculator_1.jpg" alt="Calculator" class="img-fluid">
+        <figcaption>Basic Calculator — One of the first projects I created was a basic calulator built using C#.</figcaption>
+      </figure>
+
+      <figure class="project-card">
+        <img src="images/planner.png" alt="Planner" class="img-fluid">
+        <figcaption>Yearly Academic Plan — When learning arrays I built a course tracker that records and displays prerequisites and following courses.</figcaption>
+      </figure>
+
+      <figure class="project-card">
+        <img src="images/phonebook.png" alt="phonebook" class="img-fluid">
+        <figcaption>Phone Book — I built a phone book when exploring how to store and reference data.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Project Suggestion</h2>
+
+    <!-- proj suggestions  -->
+    <form class="contact-form mx-auto"
+          action="mailto:dodge.lee.c@gmail.com"
+          method="post"
+          enctype="text/plain">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <input id="name" name="Name" type="text" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="Email" type="email" class="form-control" required>
+        </div>
+
+        <div class="col-12">
+          <label for="message" class="form-label">Suggestion</label>
+          <textarea id="message" name="Suggestion" rows="5" class="form-control" required></textarea>
+        </div>
+
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary px-4">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+    </body>
+
+
+    <footer class="text-center py-3">
+  <p>Portfolio creation supervised and approved by Reinhardt & Genji 🐶🐱 — Dodge Shepard © 2025</p>
+</footer>
+</html>
