@@ -1,0 +1,35 @@
+# 🎃 Trunk or Treat Registration Form 
+
+## 🧩 Overview
+This project is a trunk or treat registration **HTML**, **CSS**, and **JavaScript**.  
+Users enter team and car information to sign up for the trunk or treat event.  
+
+---
+
+## 🕸️ DOM Techniques Used
+
+### 1. Event Handling
+- Used `addEventListener('submit', ...)` on the form  (`registrationForm`) to grab the form when user submits.
+- The JavaScript `event.preventDefault()` to stop reloads.  
+
+---
+
+### 2. Accessing and Manipulating DOM Elements
+- Retrieved user input by `document.getElementById()` for each field:
+  - `teamname`, `phone`, `make`, `model`, `color`, and `Theme`.
+- then reset using `form.reset()`.
+
+---
+
+### 3. Form Validation
+- checked inmportant info was entered before submition.  
+- checked the phone number was in the right format. 
+- sent `alert()` messages if validation fails, checking for proper input before submission.
+
+---
+
+### 4. AI Usage
+- I used AI mostly for checking my syntax and helping me decide how to style the css. It also helped me figure out why my gif would not behave with its margins. Also to format the readme for easier reading. 
+
+
+-D.Shepard

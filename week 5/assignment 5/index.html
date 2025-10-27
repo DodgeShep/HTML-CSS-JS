@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trunk or Treat Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="registrationForm">
+    <fieldset>
+        <legend> 🎃👻 Creepin’ It Real: 
+            Trunk or Treat Sign-Up! 🍬🕸️ </legend>
+
+            <label 
+            for="name"> Team Name: </label>
+            <input 
+            type="text"
+            id="teamname"
+            required>
+
+            <label
+            for="phone"> Phone Number: </label>
+            <input
+            type="tel"
+            id="phone"
+            required>
+
+            <label
+            for="Theme"> Theme: </label>
+            <select
+            id="Theme">
+            <option
+            value="kid friendly"> Kid Friendly</option>
+            <option
+            value="scary"> Scary</option>
+            <option
+            value="funny">Funny</option> 
+            </select>
+
+           <fieldset>
+            <legend>Car Information 🚗</legend>
+
+            <label for="make">Make:</label>
+             <input type="text" 
+             id="make" name="make" 
+             placeholder="e.g. Toyota" 
+             required>
+            <br><br>
+
+            <label for="model">Model:</label>
+            <input type="text" 
+            id="model" 
+            name="model" 
+            placeholder="e.g. Corolla" 
+            required>
+            <br><br>
+
+            <label for="color">Color:</label>
+            <input type="text" 
+            id="color" 
+            name="color" 
+            placeholder="e.g. Red" 
+            required>
+            </fieldset>
+
+
+            <button
+            type="submit"> Submit 👻</button>
+
+    </fieldset>
+    
+
+
+</form>
+<!-- sneaky jumpscare -->
+<img 
+  id="jumpscare" 
+  src="gif/michael-myers-halloween.gif" 
+  alt="Michael Myers">
+  
+  <script src="forms.js"></script>
+</body>
+</html>
