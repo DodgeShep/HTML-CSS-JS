@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grey's Birthday Party</title>
+
+  <!-- Bootstrap Wire In -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Intro Section -->
+  <header class="hero text-center">
+  <div class="hero-inner">
+    <img src="Images/unicorn-header.png" alt="Left Unicorn" class="unicorn inline-unicorn">
+    <div class="hero-text">
+      <h1>Four-ever Magical!</h1>
+      <p>Join us to celebrate Grey’s 4th Birthday!</p>
+    </div>
+    <img src="Images/unicorn-header.png" alt="Right Unicorn" class="unicorn inline-unicorn">
+  </div>
+</header>
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg pastel-nav">
+    <div class="container-fluid justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="wishlist.html">Wishlist</a></li>
+        <li class="nav-item"><a class="nav-link" href="details.html">Party Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Event Details Cards -->
+  <section class="info-cards container my-5">
+    <div class="row justify-content-center text-center g-4">
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h2>When</h2>
+          <p>Saturday, December 13th</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h2>Where</h2>
+          <p>7616 Sprucecrest Street SW<br>Olympia, WA 98502</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h2>Time</h2>
+          <p>11:00 AM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Wire In -->
+  <section class="map container my-5">
+    <h2>Unicorn Grove Location</h2>
+    <iframe 
+      src="https://www.google.com/maps?q=7616+Sprucecrest+Street+SW,+Olympia,+WA+98502&output=embed"
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- RSVP Form -->
+  <section id="rsvp" class="rsvp-form container my-5 text-center">
+    <h2>RSVP</h2>
+    <div class="rsvp-border p-4 mt-3 mx-auto" style="max-width: 600px;">
+      <form>
+        <label for="parentName">Parent's Name:</label>
+        <input type="text" id="parentName" name="parentName" class="form-control mb-2" required>
+
+        <label for="childName">Child's Name:</label>
+        <input type="text" id="childName" name="childName" class="form-control mb-2" required>
+
+        <label>Will you attend?</label>
+        <select id="attendance" name="attendance" class="form-select mb-2" required>
+          <option value="">Select</option>
+          <option value="yes">Yes, we'll be there!</option>
+          <option value="no">Sorry, we can’t make it.</option>
+        </select>
+
+        <label for="guests">How many guests?</label>
+        <input type="number" id="guests" name="guests" class="form-control mb-2" min="1" required>
+
+        <label for="allergies">Allergies or Dietary Restrictions:</label>
+        <textarea id="allergies" name="allergies" rows="3" class="form-control mb-2" placeholder="Let us know!"></textarea>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="3" class="form-control mb-3" placeholder="Anything you'd like to add?"></textarea>
+
+        <button type="submit" class="btn btn-lg btn-pastel">Send RSVP 💖</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>Made with for our little unicorn, Grey </p>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
