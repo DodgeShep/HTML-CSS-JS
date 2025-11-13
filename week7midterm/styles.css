@@ -1,10 +1,81 @@
-/* Theme & Fonts */
+
+
+/* omg import the font i want */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Amarante&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+
+/* ============================================================
+   🌈 THEME VARIABLES
+   ============================================================ */
+:root {
+  /* 🎨 Colors */
+  --pink: #f9c5d1;
+  --pink-bright: #ffb6d9;
+  --pink-hot: #ff94c6;
+  --purple: #6d4e90;
+  --purple-accent: #dabafb;
+  --purple-lilac: #cd9fcc;
+  --blue-soft: #aee2ff;
+  --text-dark: #4b3b4f;
+  --white: #ffffff;
+
+  /* ✨ Shadows / Glow */
+  --glow-pink: rgba(255, 150, 200, 0.4);
+  --glow-purple: rgba(218, 186, 251, 0.3);
+
+  /* 📝 Fonts */
+  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Dancing Script', cursive;
+  --font-script: 'Great Vibes', cursive;
+
+  /* 🧁 Radiuses */
+  --radius-card: 20px;
+  --radius-box: 20px;
+
+  /* 🎞 Animation Speeds */
+  --speed-normal: 0.4s;
+}
+
+
+/* ============================================================
+   IMPORT FONTS
+   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Amarante&family=Great+Vibes&display=swap');
 
 
+/* ============================================================
+   GLOBAL BODY
+   ============================================================ */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: linear-gradient(135deg, var(--pink), var(--purple-accent), var(--blue-soft));
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  min-height: 100vh;
+}
+
+/* Animated Background Gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Utility */
+section {
+  position: relative;
+  z-index: 1;
+}
 
 
-/* --- Hero Section (Unicorns beside title) --- */
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
 .hero {
   position: relative;
   width: 100%;
@@ -12,10 +83,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(270deg, #f9c5d1, #dabafb, #aee2ff, #f9c5d1);
+  background: linear-gradient(270deg, var(--pink), var(--purple-accent), var(--blue-soft), var(--pink));
   background-size: 800% 800%;
   animation: rainbowFlow 15s ease infinite;
-  border-bottom: 2px solid #f9c5d1;
+  border-bottom: 2px solid var(--pink);
   overflow: hidden;
 }
 
@@ -32,8 +103,8 @@
 
 .hero h1 {
   font-size: 2.8rem;
-  color: #6d4e90;
-  font-family: 'Amarante', cursive;
+  color: var(--purple);
+  font-family: var(--font-heading);
   text-shadow: 0 0 10px rgba(255,255,255,0.8);
   margin: 0;
 }
@@ -41,25 +112,19 @@
 .hero p {
   margin-top: 8px;
   font-size: 1.1rem;
-  color: #4b3b4f;
+  color: var(--text-dark);
 }
 
-/* Unicorn images */
+/* Unicorn Images */
 .inline-unicorn {
   width: 180px;
   animation: dance 5s ease-in-out infinite;
 }
-
-.inline-unicorn:nth-of-type(1) {
-  animation-delay: 0s;
-}
-
 .inline-unicorn:nth-of-type(3) {
   animation-delay: 2.5s;
   transform: scaleX(-1);
 }
 
-/* Gentle dance */
 @keyframes dance {
   0%,100% { transform: translateY(0) rotate(0deg); }
   25% { transform: translateY(-8px) rotate(-3deg); }
@@ -67,7 +132,6 @@
   75% { transform: translateY(-6px) rotate(2deg); }
 }
 
-/* Rainbow background flow */
 @keyframes rainbowFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -75,52 +139,15 @@
 }
 
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #4b3b4f;
-  background: linear-gradient(135deg, #f9c5d1, #dabafb, #aee2ff);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-  min-height: 100vh;
-}
-
-/* Animated Background Gradient */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-/* Disclaimer banner on wishilist */
-.gift-banner {
-  width: 100%;
-  background: linear-gradient(90deg, #ffb6d9, #ff94c6, #ffb6d9);
-  padding: 25px 0;
-  text-align: center;
-  font-weight: 600;
-  color: #4b3b4f;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 12px rgba(255, 150, 200, 0.4);
-  position: relative;
-  z-index: 1;
-}
-
-.gift-banner p {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-
-/* Navigation Bar */
+/* ============================================================
+   NAVIGATION BAR
+   ============================================================ */
 nav {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid #f9c5d1;
+  border-bottom: 2px solid var(--pink);
 }
 
-/* Navbar Links */
 nav ul {
   list-style: none;
   display: flex;
@@ -130,19 +157,14 @@ nav ul {
   padding: 10px 0;
 }
 
-nav ul li {
-  display: inline;
-}
-
 nav a {
   position: relative;
   text-decoration: none;
   font-weight: 600;
-  color: #6d4e90 !important;
-  padding-bottom: 6px; 
+  color: var(--purple) !important;
+  padding-bottom: 6px;
 }
 
-/* Bubble underline */
 nav a::after {
   content: "";
   position: absolute;
@@ -151,95 +173,103 @@ nav a::after {
   transform: translateX(-50%);
   width: 60%;
   height: 6px;
-  background: #ffb6d9; 
+  background: var(--pink-bright);
   border-radius: 10px;
-  opacity: 1; 
 }
 
 nav a:hover {
-  color: #f9c5d1 !important;
-  text-shadow: 0 0 8px #dabafb;
+  color: var(--pink) !important;
+  text-shadow: 0 0 8px var(--purple-accent);
 }
 
 
-/* Amazon Button */
+/* ============================================================
+   AMAZON BUTTON
+   ============================================================ */
 .amazon-btn {
   display: inline-block;
   padding: 12px 28px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #4b3b4f !important;
+  color: var(--text-dark) !important;
   border-radius: 30px;
-  text-decoration: none;
-  background: linear-gradient(90deg, #ffb6d9, #ff94c6, #ffb6d9);
-  box-shadow: 0 4px 12px rgba(255, 182, 217, 0.4);
-  border: none;
-  transition: all 0.3s ease;
- text-decoration: underline; 
+  background: linear-gradient(90deg, var(--pink-bright), var(--pink-hot), var(--pink-bright));
+  box-shadow: 0 4px 12px var(--glow-pink);
+  transition: var(--speed-normal);
+  text-decoration: underline;
 }
 
 .amazon-btn:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 6px 15px rgba(255, 182, 217, 0.55);
-  background: linear-gradient(90deg, #ff94c6, #ffb6d9, #ff94c6);
-  color: #4b3b4f !important;
+  background: linear-gradient(90deg, var(--pink-hot), var(--pink-bright), var(--pink-hot));
 }
 
-/* Mao Stying */
+
+/* ============================================================
+   MAP SECTION
+   ============================================================ */
 .map h2 {
   text-align: center;
-  font-family: 'Amarante', cursive;
-  color: #6d4e90;
+  font-family: var(--font-heading);
+  color: var(--purple);
   margin-bottom: 15px;
   text-shadow: 0 0 6px rgba(249,197,209,0.5);
 }
+
 .map {
-  border: 3px solid #ff8ad8;            
-  border-radius: 20px;                  
+  border: 3px solid #ff8ad8;
+  border-radius: 20px;
   padding: 25px;
-  box-shadow: 0 0 15px #ff8ad8,
-              0 0 25px #ff8ad8;         
+  box-shadow: 0 0 15px #ff8ad8, 0 0 25px #ff8ad8;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
+
 .map iframe {
   border-radius: 15px;
-  border: none;
   width: 100%;
+  border: none;
 }
 
-/* Cards */
 
+/* ============================================================
+   INFO CARDS
+   ============================================================ */
 .card {
-  border: 2px solid #f9c5d1;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(218, 186, 251, 0.3);
+  border: 2px solid var(--pink);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 10px var(--glow-purple);
   background-color: rgba(255, 255, 255, 0.9);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  height: 180px;                      
+  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+}
+.info-cards h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: var(--purple);
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(249,197,209,0.4);
 }
 
 .card-icon {
   max-height: 60px;
-  width: auto;
-  display: block;
-  margin: 0 auto 12px;
+  margin-bottom: 12px;
 }
 
-.emoji-icon {
-  width: 22px;      
-  height: auto;
-  vertical-align: middle;
-  margin-right: 6px;
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--pink);
 }
 
-/* Shimmer effect */
+/* Shimmer */
 .card::before {
   content: "";
   position: absolute;
@@ -247,83 +277,72 @@ nav a:hover {
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
   transform: skewX(-25deg);
-  transition: 0.5s;
 }
 
 .card:hover::before {
   animation: shimmer 2.5s infinite;
 }
 
-/* Shimmer Animation */
 @keyframes shimmer {
   0% { left: -75%; }
-  50% { left: 125%; }
   100% { left: 125%; }
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px #f9c5d1;
-}
-
-/* Emoji / Image Placeholder */
-.emoji-placeholder {
-  font-size: 2.5rem;
-}
-/* Info Cards Layout */
-.info-cards .row {
-  justify-content: center;
 }
 
 .info-cards .card {
   max-width: 280px;
   margin: 0 auto;
-  background: linear-gradient(180deg, #ffffff, #f9c5d130);
-  border: 2px solid #f9c5d1;
+  background: linear-gradient(180deg, var(--white), #f9c5d130);
 }
 
-/* --- RSVP Section --- */
+
+/* ============================================================
+  OTHER CARDS
+   ============================================================ */
+
+   .wishlist-icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  object-fit: contain;
+  font-size: 3.2rem; /* emojis scale with font-size */
+  line-height: 1;
+}
+
+
+/* ============================================================
+   RSVP FORM
+   ============================================================ */
 .rsvp-border {
-  border: 3px solid #ff8ad8;          
+  border: 3px solid #ff8ad8;
   border-radius: 20px;
-  box-shadow: 0 0 15px #ff8ad8, 
-              0 0 25px #ff8ad8;       
+  box-shadow: 0 0 15px #ff8ad8, 0 0 25px #ff8ad8;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
-.rsvp-border form {
-  display: grid;
-  grid-template-columns: 1fr 2fr;   
-  gap: 15px 20px;                   
-  text-align: left;                 
-}
 
-.rsvp-border label {
-  font-weight: 600;
-  padding-top: 6px;                 
-}
-
-.rsvp-border button {
-  grid-column: span 2;              
-  margin-top: 20px;
-}
 .rsvp-form {
-  background: rgba(218, 186, 251, 0.25); 
+  background: rgba(218, 186, 251, 0.25);
   border-radius: 20px;
   padding: 30px 40px;
   max-width: 900px;
   margin: 40px auto;
-  box-shadow: 0 4px 12px rgba(218, 186, 251, 0.3);
+  box-shadow: 0 4px 12px var(--glow-purple);
   backdrop-filter: blur(5px);
 }
 
 .rsvp-form h2 {
   text-align: center;
-  font-family: 'Amarante', cursive;
-  color: #6d4e90;
-  margin-bottom: 25px;
+  font-family: var(--font-heading);
+  color: var(--purple);
+}
+
+.rsvp-form form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px 20px;
 }
 
 .rsvp-form input,
@@ -331,72 +350,198 @@ nav a:hover {
 .rsvp-form textarea {
   width: 100%;
   padding: 10px;
-  border: 2px solid #f9c5d1;
+  border: 2px solid var(--pink);
   border-radius: 10px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-family: var(--font-body);
 }
-
 
 .rsvp-form label {
   font-weight: 600;
-  color: #4b3b4f;
+  color: var(--text-dark);
 }
 
-/* Make the Button Cute */
 .rsvp-form button {
-  background: linear-gradient(90deg, #dabafb, #f9c5d1);
+  grid-column: span 2;
+  background: linear-gradient(90deg, var(--purple-accent), var(--pink));
   border: none;
-  color: #4b3b4f;
+  color: var(--text-dark);
   padding: 12px;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(218, 186, 251, 0.4);
+  transition: var(--speed-normal);
+  box-shadow: 0 4px 10px var(--glow-purple);
 }
 
 .rsvp-form button:hover {
-  background: linear-gradient(90deg, #f9c5d1, #dabafb);
+  background: linear-gradient(90deg, var(--pink), var(--purple-accent));
   transform: scale(1.03);
-  box-shadow: 0 0 15px #dabafb;
 }
 
-/* Responsive layout for small screens */
+
+/* Phone responsiveness */
 @media (max-width: 768px) {
   .rsvp-form form {
     grid-template-columns: 1fr;
   }
-
-  .rsvp-form textarea,
-  .rsvp-form select,
-  .rsvp-form button {
-    grid-column: span 1;
-  }
 }
 
 
-/* Headings */
-h1, h2 {
-  font-family: 'Amarante', cursive;
-  color: #6d4e90;
-  text-shadow: 0 0 6px rgba(249,197,209,0.5);
+/* ============================================================
+   SUBMISSION OVERLAY
+   ============================================================ */
+#formOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 200;
 }
 
-/* Footer */
-footer {
-  background: linear-gradient(90deg, #aee2ff, #dabafb, #f9c5d1);
-  color: #4b3b4f;
-  border-top: 2px solid #f9c5d1;
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  padding: 20px 0;
+#formOverlay .overlay-box {
+  background: var(--white);
+  padding: 25px 40px;
+  border-radius: var(--radius-box);
+  font-size: 1.4rem;
+  color: var(--purple);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border: 2px solid var(--purple-lilac);
 }
+/*=============================================================
+    DISCLAIMER BANNER
+   ============================================================ */
 
-/* Utility */
-section {
+.gift-banner {
+  width: 100%;
+  background: var(--purple); 
+  padding: 25px 0;
+  text-align: center;
+  font-weight: 600;
+  color: var(--white);
+  box-shadow: 0 4px 12px var(--glow-purple);
   position: relative;
   z-index: 1;
 }
 
+.gift-banner p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: var(--font-body);
+}
 
+/* ============================================================
+   SPARKLE CANVAS
+   ============================================================ */
+#sparkleCanvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: linear-gradient(90deg, var(--blue-soft), var(--purple-accent), var(--pink));
+  color: var(--text-dark);
+  border-top: 2px solid var(--pink);
+  font-family: var(--font-script);
+  font-size: 2rem;
+  padding: 20px 0;
+}
+
+
+/* ============================
+    Mobile Styles 
+   ============================ */
+@media (max-width: 576px) {
+
+  .hero {
+    height: auto;
+    padding: 25px 0 10px;
+  }
+  .inline-unicorn {
+    width: 120px;
+    margin: 0 5px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  nav ul {
+    gap: 10px !important;
+    text-align: center;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+  nav a::after {
+    height: 4px;
+    width: 40%;
+  }
+  main {
+    padding-top: 15px;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .wishlist-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2.6rem;
+  }
+}
+
+
+
+
+/* ============================
+    Tablet Styles 
+   ============================ */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 35px 0 20px;
+  }
+  .inline-unicorn {
+    width: 150px;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  nav a {
+    font-size: 1.1rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .wishlist-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 3rem;
+  }
+}
+
+
+/* ============================================================
+   END OF STYLES
+   ============================================================ */

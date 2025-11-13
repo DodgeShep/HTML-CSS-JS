@@ -1,35 +1,65 @@
-# 🎃 Trunk or Treat Registration Form 
 
-## 🧩 Overview
-This project is a trunk or treat registration **HTML**, **CSS**, and **JavaScript**.  
-Users enter team and car information to sign up for the trunk or treat event.  
 
----
 
-## 🕸️ DOM Techniques Used
+# Project Name: RSVP Website
+## CIS - 185 -Midterm Project
+## Author : [Dodge Shepard]
+## Date : [11/13/2025]
 
-### 1. Event Handling
-- Used `addEventListener('submit', ...)` on the form  (`registrationForm`) to grab the form when user submits.
-- The JavaScript `event.preventDefault()` to stop reloads.  
+
+## 1. Project Description
+This project is a RSVP 3 page website for my daughters 4th birthday. In total it contains a RSVP form, party details and links to her Amazon list plus some other gift ideas. The style is taken from her actual invitations this year I will drop in the images folder if you are curious to see twhat they look like. 
 
 ---
 
-### 2. Accessing and Manipulating DOM Elements
-- Retrieved user input by `document.getElementById()` for each field:
-  - `teamname`, `phone`, `make`, `model`, `color`, and `Theme`.
-- then reset using `form.reset()`.
+## 2. Target Audience 
+  The target audience are party attendees, alongside those wishing to purchase a gift for her birthday. 
+
+### 3. Main Features
+- Title Banner with dancing unicorns
+- Star sparkle rain 
+- RSVP form 
+- Maps Location for party
+- Cards for both party details / wishlists
 
 ---
 
-### 3. Form Validation
-- checked inmportant info was entered before submition.  
-- checked the phone number was in the right format. 
-- sent `alert()` messages if validation fails, checking for proper input before submission.
+### 4. Technologies Used
+- HTML
+- CSS
+- Bootstrap
+- Javascript
+- Google Fonts
+- Canvas API
+
 
 ---
 
-### 4. AI Usage
-- I used AI mostly for checking my syntax and helping me decide how to style the css. It also helped me figure out why my gif would not behave with its margins. Also to format the readme for easier reading. 
+### 5. File Structure
+- index.html (Homepage with form)
+- wishlist.html (links to amazon and likes)
+- details.html (party details other than location)
+- styles.css (styling)
+- script.js ( for the scripts)
+- Images/ (folder containing all the images and the actual invitations)
+
+---
+
+### 6. Challenges Faced
+ - The biggest challenges I faced were the animations and making everything look good on different device sizes. The sparkle rain took me like 5 hours because I am bad at coding but I did get it down eventually. 
+
+### 7. AI Usage
+- I used Chat GPT with pulling the colors from the original invitation, helping debug in general but mostly the dancing/rockingg animation and the sparkle rain(straight up stolen from your fall leaves lecture because it was so cute). 
+
+### 8. Future Improvements
+-I think in the future I can add a guestlist and gifts bought section to prevent double gifting. Also so other guests can see who else is going. My plan is to actually impliment this next year on her invitations. 
+
+### 9. Credits
+- chatgpt
+- Canva.com ( her original invites)
+- Good old fashion google image search 
+- [background remover for pngs](https://www.remove.bg/)
+- Bootstrap for containers.
 
 
 -D.Shepard
